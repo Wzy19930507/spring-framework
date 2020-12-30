@@ -2,10 +2,21 @@ plugins {
 	id 'java-gradle-plugin'
 }
 
+//repositories {
+//	mavenCentral()
+//	gradlePluginPortal()
+//}
 repositories {
-	mavenCentral()
+	maven { url "https://maven.aliyun.com/repository/public" }
+	maven { url "https://maven.aliyun.com/nexus/content/repositories/jcenter/" }
+	maven { url "https://maven.aliyun.com/repository/spring-plugin" }
+	mavenLocal()
 	gradlePluginPortal()
+	maven { url "https://repo.spring.io/libs-spring-framework-build" }
+	maven { url "https://repo.spring.io/milestone" }
+	maven { url "https://repo.spring.io/plugins-release" }
 }
+
 
 dependencies {
 	implementation "me.champeau.gradle:japicmp-gradle-plugin:0.2.8"
